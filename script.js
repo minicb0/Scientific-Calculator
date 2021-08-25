@@ -244,20 +244,38 @@ function factorial(n) {
 
 //dark mode
 var darkMode = document.getElementById("darkMode");
+
+//initiall light mode
+document.documentElement.style.setProperty('--body-bg-color', window.getComputedStyle(document.documentElement).getPropertyValue('--body-bg-color-light'))
+document.documentElement.style.setProperty('--body-color', window.getComputedStyle(document.documentElement).getPropertyValue('--body-color-light'))
+document.documentElement.style.setProperty('--input-bg-color', window.getComputedStyle(document.documentElement).getPropertyValue('--input-bg-color-light'))
+document.documentElement.style.setProperty('--dark-btn-bg-color', window.getComputedStyle(document.documentElement).getPropertyValue('--dark-btn-bg-color-light'))
+document.documentElement.style.setProperty('--dark-btn-color', window.getComputedStyle(document.documentElement).getPropertyValue('--dark-btn-color-light'))
+
 darkMode.addEventListener('click', () => {
     if (darkMode.innerHTML == "Light Mode") {
-        document.body.style.backgroundColor = "rgb(206, 203, 203)"
-        document.body.style.color = "black"
-        current.style.backgroundColor = "transparent"
-        darkMode.style.color = "white"
-        darkMode.style.backgroundColor = "black"
+        document.documentElement.style.setProperty('--body-bg-color', window.getComputedStyle(document.documentElement).getPropertyValue('--body-bg-color-light'))
+        document.documentElement.style.setProperty('--body-color', window.getComputedStyle(document.documentElement).getPropertyValue('--body-color-light'))
+        document.documentElement.style.setProperty('--input-bg-color', window.getComputedStyle(document.documentElement).getPropertyValue('--input-bg-color-light'))
+        document.documentElement.style.setProperty('--dark-btn-bg-color', window.getComputedStyle(document.documentElement).getPropertyValue('--dark-btn-bg-color-light'))
+        document.documentElement.style.setProperty('--dark-btn-color', window.getComputedStyle(document.documentElement).getPropertyValue('--dark-btn-color-light'))
+        // document.body.style.backgroundColor = "rgb(206, 203, 203)"
+        // document.body.style.color = "black"
+        // current.style.backgroundColor = "transparent"
+        // darkMode.style.color = "white"
+        // darkMode.style.backgroundColor = "black"
         darkMode.innerHTML = "Dark Mode"
     } else if (darkMode.innerHTML == "Dark Mode") {
-        document.body.style.backgroundColor = "rgb(19, 19, 19)"
-        document.body.style.color = "white"
-        current.style.backgroundColor = "white"
-        darkMode.style.color = "black"
-        darkMode.style.backgroundColor = "white"
+        document.documentElement.style.setProperty('--body-bg-color', window.getComputedStyle(document.documentElement).getPropertyValue('--body-bg-color-dark'))
+        document.documentElement.style.setProperty('--body-color', window.getComputedStyle(document.documentElement).getPropertyValue('--body-color-dark'))
+        document.documentElement.style.setProperty('--input-bg-color', window.getComputedStyle(document.documentElement).getPropertyValue('--input-bg-color-dark'))
+        document.documentElement.style.setProperty('--dark-btn-bg-color', window.getComputedStyle(document.documentElement).getPropertyValue('--dark-btn-bg-color-dark'))
+        document.documentElement.style.setProperty('--dark-btn-color', window.getComputedStyle(document.documentElement).getPropertyValue('--dark-btn-color-dark'))
+        // document.body.style.backgroundColor = "rgb(19, 19, 19)"
+        // document.body.style.color = "white"
+        // current.style.backgroundColor = "white"
+        // darkMode.style.color = "black"
+        // darkMode.style.backgroundColor = "white"
         darkMode.innerHTML = "Light Mode"
     }
 })
