@@ -1,14 +1,8 @@
 :root {
-    --body-color-light: rgb(0, 0, 0);
-    --body-bg-color-light: rgb(206, 203, 203);
-    --dark-btn-bg-color-light: black;
-    --dark-btn-color-light: white;
-    --input-bg-color-light: transparent;
-    --body-color-dark: white;
-    --body-bg-color-dark: rgb(19, 19, 19);
-    --dark-btn-bg-color-dark: white;
-    --dark-btn-color-dark: black;
-    --input-bg-color-dark: white;
+    --dark: rgb(19, 19, 19);
+    --light: rgb(206, 203, 203);
+    --black: rgb(0, 0, 0);
+    --white: white;
 }
 
 * {
@@ -17,9 +11,29 @@
     margin: 0;
 }
 
+.light-theme {
+    color: var(--black);
+    background-color: var(--light);
+}
+
+.dark-theme {
+    color: var(--white);
+    background-color: var(--dark);
+}
+
+.dark-theme-btn {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.light-theme-btn {
+    color: var(--white);
+    background-color: var(--black);
+}
+
 body {
-    color: var(--body-color);
-    background-color: var(--body-bg-color);
+    /* color: var(--body-color);
+    background-color: var(--body-bg-color); */
     font-family: Arial, Helvetica, sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,8 +61,8 @@ h1 {
 }
 
 #darkMode {
-    color: var(--dark-btn-color);
-    background-color: var(--dark-btn-bg-color);
+    /* color: var(--dark-btn-color);
+    background-color: var(--dark-btn-bg-color); */
     font-size: 20px;
     padding: 5px;
     border: 2px solid black;
@@ -75,7 +89,7 @@ h1 {
     margin-bottom: 5px;
     border-radius: 5px;
     border: 1px solid rgb(192, 191, 191);
-    background-color: var(--input-bg-color);
+    background-color: transparent;
 }
 
 .special {
